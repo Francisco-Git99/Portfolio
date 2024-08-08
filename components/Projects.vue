@@ -3,22 +3,22 @@
         <h2 id="proyectos-heading">Proyectos</h2>
         <div class="container">
             <article class="art" role="article">
-                <h3>Próximamente</h3>
+                <p>Próximamente</p>
             </article>
             <article class="art" role="article">
-                <h3>Próximamente</h3>
+                <p>Próximamente</p>
             </article>
             <article class="art" role="article">
-                <h3>Próximamente</h3>
+                <p>Próximamente</p>
             </article>
             <article class="art" role="article">
-                <h3>Próximamente</h3>
+                <p>Próximamente</p>
             </article>
             <article class="art" role="article">
-                <h3>Próximamente</h3>
+                <p>Próximamente</p>
             </article>
             <article class="art" role="article">
-                <h3>Próximamente</h3>
+                <p>Próximamente</p>
             </article>
         </div>
     </section>
@@ -28,6 +28,8 @@
 </script>
 
 <style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
 #proyectos {
     width: 80%;
     margin: 0 auto;
@@ -37,6 +39,9 @@
 }
 
 #proyectos h2 {
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+    font-style: normal;
     text-align: center;
     font-size: 2.5em;
     margin: 0.8em 0 1em;
@@ -66,6 +71,12 @@
     transform: scale(1.05);
     cursor: pointer;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.art p {
+    font-weight: 400;
+    font-style: italic;
+    text-align: center;
 }
 
 @media (max-width: 1024px) {

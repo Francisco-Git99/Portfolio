@@ -76,6 +76,8 @@ onUnmounted(() => {
 </script>
 
 <style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
 .container-about-me {
   margin-top: 2em;
   display: flex;
@@ -98,10 +100,13 @@ onUnmounted(() => {
 #sobre-mi h2 {
   width: 80%;
   color: white;
-  font-size: 2.5em;
+  font-size: 2.3em;
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-style: normal;
   margin-top: 20px;
   text-align: center;
-  text-decoration:  underline;
+  text-decoration: underline;
 }
 
 .paragraph-container {
@@ -110,6 +115,9 @@ onUnmounted(() => {
 }
 
 #sobre-mi p {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-style: normal;
   font-size: 1.5em;
   margin-top: 1em;
   color: whitesmoke;
@@ -128,7 +136,7 @@ onUnmounted(() => {
 .ver-mas-btn {
   text-decoration: none;
   padding: 0.5em 1em;
-  font-size: 1.2em;
+  font-size: 1.1em;
   background-color: #19c778;
   color: white;
   border: 2px solid transparent;
@@ -137,6 +145,9 @@ onUnmounted(() => {
   transition: background-color 0.3s, border-color 0.3s;
   box-sizing: border-box;
   margin-top: 1em;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .ver-mas-btn:hover {
@@ -148,6 +159,9 @@ onUnmounted(() => {
   text-decoration: none;
   padding: 0.5em 1em;
   font-size: 1.2em;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-style: normal;
   background-color: #19c778;
   color: white;
   border: 2px solid transparent;
@@ -188,7 +202,11 @@ onUnmounted(() => {
     line-height: 1.3em;
   }
 
-  .download-cv-btn{
+  .ver-mas-btn {
+    margin-right: 0.5em;
+  }
+
+  .download-cv-btn {
     margin-left: 0;
   }
 }

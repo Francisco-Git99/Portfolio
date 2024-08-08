@@ -22,6 +22,8 @@
 
 
 <style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
 .hero {
     margin-top: 6em;
     display: flex;
@@ -56,6 +58,9 @@
     text-align: center;
     font-size: 2.5em;
     margin-bottom: 0.5em;
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+    font-style: normal;
 }
 
 .hero h2 {
@@ -64,6 +69,9 @@
     text-align: center;
     font-size: 1.8em;
     margin-bottom: 1.2em;
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+    font-style: normal;
 }
 
 .button-container {
@@ -74,7 +82,10 @@
 .btn {
     text-decoration: none;
     padding: 0.5em 1em;
-    font-size: 1.2em;
+    font-size: 1.1em;
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+    font-style: normal;
     background-color: #19c778;
     color: white;
     border: 2px solid transparent;
@@ -92,6 +103,9 @@
 .btn-simple {
     background-color: transparent;
     border-color: #19c778;
+    font-family: "Lato", sans-serif;
+    font-weight: 600;
+    font-style: normal;
 }
 
 .fade-in {
@@ -115,7 +129,12 @@
 
 /* Media Queries for Responsiveness */
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1415px) {
+    .hero-content {
+        margin-top: 2em;
+        margin-bottom: 2em;
+    }
+
     .hero img {
         width: 25em;
     }

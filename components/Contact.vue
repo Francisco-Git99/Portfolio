@@ -7,18 +7,18 @@
                 <form ref="form" @submit.prevent="sendEmail">
                     <div class="form-row">
                         <div class="form-group">
-                            <label for="from_name">Nombre:</label>
-                            <input type="text" id="from_name" name="from_name" required placeholder="Nombre"
-                                aria-required="true" aria-describedby="from_name_error" />
+                            <label for="from_name">Nombre</label>
+                            <input type="text" id="from_name" name="from_name" required aria-required="true"
+                                aria-describedby="from_name_error" />
                         </div>
                         <div class="form-group">
-                            <label for="email_id">Correo electrónico:</label>
-                            <input type="email" id="email_id" name="email_id" required placeholder="Correo electrónico"
-                                aria-required="true" aria-describedby="email_id_error" />
+                            <label for="email_id">Correo electrónico</label>
+                            <input type="email" id="email_id" name="email_id" required aria-required="true"
+                                aria-describedby="email_id_error" />
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="message">Tu mensaje:</label>
+                        <label for="message">Tu mensaje</label>
                         <textarea id="message" name="message" rows="4" required placeholder="Tu mensaje..."
                             aria-required="true" aria-describedby="message_error"></textarea>
                     </div>
@@ -62,10 +62,19 @@ const handleError = (error) => {
     }, 6000);
 };
 
+function escapeHtml(text) {
+    return text
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
+}
+
 const sendEmail = async () => {
-    const fromName = form.value.from_name.value.trim();
-    const emailId = form.value.email_id.value.trim();
-    const message = form.value.message.value.trim();
+    const fromName = escapeHtml(form.value.from_name.value.trim());
+    const emailId = escapeHtml(form.value.email_id.value.trim());
+    const message = escapeHtml(form.value.message.value.trim());
 
     if (!fromName || !emailId || !message) {
         alert("Por favor, completa todos los campos.");
@@ -98,6 +107,8 @@ const sendEmail = async () => {
 
 
 <style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap');
+
 #contacto {
     width: 80%;
     margin: 2em auto 0;
@@ -109,13 +120,19 @@ const sendEmail = async () => {
 }
 
 #contacto h2 {
-    font-size: 2.5em;
+    font-family: "Mochiy Pop One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2.3em;
     margin: 0.5em 0;
 }
 
 #contacto h3 {
-    font-size: 1.6em;
+    font-size: 1.2em;
     margin-bottom: 1.5em;
+    font-family: "Mochiy Pop One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .container {
@@ -145,7 +162,11 @@ const sendEmail = async () => {
 }
 
 label {
+    font-size: 0.8em;
     margin-bottom: 0.3em;
+    font-family: "Mochiy Pop One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 input,
@@ -180,7 +201,10 @@ button {
     color: whitesmoke;
     border: none;
     border-radius: 0.5em;
-    font-size: 1em;
+    font-family: "Mochiy Pop One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 0.9em;
     font-weight: bold;
     cursor: pointer;
     transition: background-color 0.3s;
@@ -263,6 +287,7 @@ button:hover {
 }
 
 @media screen and (max-width: 1720px) {
+
     .form-contact {
         left: 0em;
     }
@@ -291,6 +316,10 @@ button:hover {
     .container {
         flex-direction: column;
         align-items: center;
+    }
+
+    #contacto h3 {
+        font-size: 1em;
     }
 
     .form-row {

@@ -58,6 +58,8 @@ function scrollToSection(event, sectionId) {
 </script>
 
 <style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 .navbar-container {
     position: fixed;
     top: 0;
@@ -67,7 +69,7 @@ function scrollToSection(event, sectionId) {
 }
 
 .nav-list {
-    font-size: 20px;
+    font-size: 18px;
     background-color: rgba(5, 106, 126, 1);
     border: 1px solid #19c778;
     border-top: none;
@@ -78,6 +80,9 @@ function scrollToSection(event, sectionId) {
     align-items: center;
     padding: 0 2em;
     position: relative;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .nav-list ul {
